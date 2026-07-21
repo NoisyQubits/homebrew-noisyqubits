@@ -18,9 +18,8 @@ Three-finger-click Play/Pause for the macOS trackpad —
 [source](https://github.com/NoisyQubits/TripleTap).
 
 ```sh
-brew install --HEAD tripletap
+brew install tripletap
 brew services start tripletap    # run in background, start at login
 ```
 
-The formula is head-only until a tagged release exists; see the comments in
-`Formula/tripletap.rb` for enabling stable installs.
+Add `--HEAD` to build the latest `main` instead of the tagged release.
