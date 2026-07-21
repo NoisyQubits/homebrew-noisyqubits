@@ -6,6 +6,8 @@ Homebrew tap for [NoisyQubits](https://github.com/NoisyQubits) tools.
 
 ```sh
 brew tap noisyqubits/noisyqubits
+brew trust noisyqubits/noisyqubits   # required once: recent Homebrew won't load
+                                     # a formula from an untrusted third-party tap
 ```
 
 ## Formulae
