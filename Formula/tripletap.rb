@@ -15,6 +15,7 @@
 class Tripletap < Formula
   desc "Three-finger-click Play/Pause for the macOS trackpad"
   homepage "https://github.com/NoisyQubits/TripleTap"
+  license "MIT"
   url "https://github.com/NoisyQubits/TripleTap/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "0a0b707d6c5e97934c415ed8bc4bc6614d52de25d2d31408be60fcec6828e245"
   head "https://github.com/NoisyQubits/TripleTap.git", branch: "main"
