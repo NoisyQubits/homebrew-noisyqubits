@@ -23,3 +23,20 @@ brew services start tripletap    # run in background, start at login
 ```
 
 Add `--HEAD` to build the latest `main` instead of the tagged release.
+
+## Casks
+
+### speechflow
+
+On-device macOS dictation — double-tap Right Shift, speak, and it types the
+transcription into the focused app. Fully offline (sherpa-onnx + Moonshine) —
+[source](https://github.com/NoisyQubits/SpeechFlow).
+
+```sh
+brew install --cask speechflow
+open -a SpeechFlow
+```
+
+Apple Silicon, macOS 13+. First launch downloads the speech model (~370 MB)
+once; then grant Microphone + Accessibility. The app is self-signed (not
+notarized) — if macOS blocks it, right-click → Open, or add `--no-quarantine`.
