@@ -23,7 +23,8 @@ echo 'source "$(brew --prefix recall)/libexec/recall.plugin.zsh"' >> ~/.zshrc
 ```
 
 ListView is active by default. Up/Down navigates candidates and Enter executes
-the selected command.
+the selected command. Recall 0.2 uses a powder-gray selected row with
+bright-white text by default in both light and dark terminal profiles.
 
 ### tripletap
 

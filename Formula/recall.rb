@@ -6,16 +6,15 @@
 class Recall < Formula
   desc "History-backed predictive command suggestions for Zsh"
   homepage "https://github.com/NoisyQubits/recall"
-  url "https://github.com/NoisyQubits/recall/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "e4a9b35378002662ab4c7c263e2b68578a595e0b36b6c26ee8874f25496481ce"
+  url "https://github.com/NoisyQubits/recall/releases/download/v0.2.0/recall-0.2.0.tar.gz"
+  sha256 "791bbaf5fbf4b9c1502f9d73b430ffe0347601f07c237dac742853cf9c6b9f1f"
   license "MIT"
   head "https://github.com/NoisyQubits/recall.git", branch: "main"
 
   def install
-    libexec.install "lib", "recall.plugin.zsh", "zpredict.plugin.zsh"
-    (libexec / "bin").install "bin/recall", "bin/zpredict"
+    libexec.install "lib", "tests", "recall.plugin.zsh"
+    (libexec / "bin").install "bin/recall"
     bin.install_symlink libexec / "bin/recall" => "recall"
-    bin.install_symlink libexec / "bin/zpredict" => "zpredict"
   end
 
   def caveats
@@ -32,5 +31,10 @@ class Recall < Formula
   test do
     assert_match "recall #{version}", shell_output("#{bin}/recall version")
     assert_match "Usage: recall", shell_output("#{bin}/recall help")
+    style = shell_output <<~EOS
+      env -u RECALL_SELECTED_STYLE zsh -f -c 'source "#{libexec}/recall.plugin.zsh";
+      print -r -- "$RECALL_SELECTED_STYLE"'
+    EOS
+    assert_equal "bg=8,fg=15,bold\n", style
   end
 end
