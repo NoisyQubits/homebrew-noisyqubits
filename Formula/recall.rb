@@ -6,9 +6,9 @@
 class Recall < Formula
   desc "History-backed predictive command suggestions for Zsh"
   homepage "https://github.com/NoisyQubits/recall"
-  license "MIT"
   url "https://github.com/NoisyQubits/recall/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "e4a9b35378002662ab4c7c263e2b68578a595e0b36b6c26ee8874f25496481ce"
+  license "MIT"
   head "https://github.com/NoisyQubits/recall.git", branch: "main"
 
   def install
