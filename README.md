@@ -12,6 +12,19 @@ brew trust noisyqubits/noisyqubits   # required once: recent Homebrew won't load
 
 ## Formulae
 
+### recall
+
+History-backed predictive command suggestions for Zsh —
+[source](https://github.com/NoisyQubits/recall).
+
+```sh
+brew install recall
+echo 'source "$(brew --prefix recall)/libexec/recall.plugin.zsh"' >> ~/.zshrc
+```
+
+ListView is active by default. Up/Down navigates candidates and Enter executes
+the selected command.
+
 ### tripletap
 
 Three-finger-click Play/Pause for the macOS trackpad —
