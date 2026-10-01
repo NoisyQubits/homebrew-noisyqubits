@@ -1,6 +1,6 @@
 cask "filespoke" do
-  version "0.1.0"
-  sha256 "fe44d8753e0e8c830809aeb44cac4263e69c67dd5811d321bca0fceed42dc0d3"
+  version "1.0.0"
+  sha256 "b5884abbb86adb00a1be6653bc32d95a668f627a9460ee49f9336280f57152dd"
 
   url "https://github.com/NoisyQubits/FileSpoke/releases/download/v#{version}/FileSpoke-#{version}.zip"
   name "FileSpoke"
