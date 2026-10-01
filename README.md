@@ -40,6 +40,21 @@ Add `--HEAD` to build the latest `main` instead of the tagged release.
 
 ## Casks
 
+### filespoke
+
+Local macOS file conversion and editing from a Finder Shift-drag wheel —
+[source](https://github.com/NoisyQubits/FileSpoke). It handles images, video,
+audio, PDF, text/subtitles, and archives, saving new files beside the originals.
+
+```sh
+brew install --cask filespoke
+open -a FileSpoke
+```
+
+Apple Silicon, macOS 14+. Grant Accessibility permission for the Finder drag
+gesture; the menu bar file picker works without it. The app is ad hoc signed and
+not notarized, so macOS may require opening it once from Finder.
+
 ### speechflow
 
 On-device macOS dictation — double-tap Right Shift, speak, and it types the
