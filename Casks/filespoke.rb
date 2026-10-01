@@ -7,8 +7,8 @@ cask "filespoke" do
   desc "Local file conversion and editing from a Finder drag wheel"
   homepage "https://github.com/NoisyQubits/FileSpoke"
 
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "FileSpoke.app"
 
